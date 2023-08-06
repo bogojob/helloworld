@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:700,500,600");
+.wrapper-filesystem-data.fsdisabled {
+  cursor:not-allowed;
+  pointer-events:none;
+}
+.wrapper-filesystem-data {
+  cursor: pointer;
+  pointer-events: all;
+}
+.wrapper-filesystem-data {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--concrete);
+  margin-top: 30px;
+  padding: 0 0;
+  overflow: auto;
+  
+
+  /* padding-left: 100px;
+  padding-top: 50px; */
+}
+.nw-fm-tree-root {
+  
+  cursor:pointer !important;
+  
+}
+
+.wrapper-filesystem-footer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: var(--concrete);
+  border-top: 1px dotted var(--bdazzled-blue);
+  padding: 0 0;
+  height: 60px;
+  overflow: auto;
+}
+
+.infospace {
+  font-family: var(--font-family-rajdhani);
+  font-size: 12px;
+}
+
+div.wrapper-filesystem-footer {
+  font-family: var(--font-family-rajdhani);
+  font-size: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.progress {
+  border-radius: 0rem !important;
+  --bs-progress-bar-bg: var(--dark-kaky) !important;
+  --bs-progress-bg: var(--pale-spring-bud) !important;
+}
+
+ul {
+  display: block;
+  padding: 0px !important;
+  margin: 0px;
+  list-style: none;
+  transition: all 2s ease-in-out 0s;
+}
+ul ul .nw-fm-tree-item {
+  padding-left: 16px;
+}
+
+ul ul {
+  display: none;
+}
+
+
+
+ul ul.opened {
+  display: block;
+}
+
+li {
+  display: block;
+  white-space: nowrap;
+  position: relative;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.nw-fm-tree-item {
+  line-height: 24px;
+  background-color: rgba(217, 0, 7, 0);
+  padding-right: 13px;
+}
+
+.nw-fm-tree-folder,
+.nw-fm-tree-folder-opened {
+  font-family: "Rajdhani";
+  display: inline-block;
+  margin-left: 24px; /*spazio fra finzio folder image e folder name*/
+  padding-left: 34px; /*spazio from folder image  e foldername*/
+  max-width: calc(100% - 23px);
+  box-sizing: border-box;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--gunmetal);
+  height: 24px;
+  text-overflow: ellipsis;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.nw-fm-tree-folder::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background-image: url("./images/fi-ss-add-folder.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: 0px;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+  transition: all 1s ease-out;
+}
+
+.nw-fm-tree-folder-opened::before {
+  background-image: url("./images/fi-ss-folder.svg");
+  transition: all 1s ease-out;
+}
+
+.nw-fm-tree-fileimage {
+  font-family: "Rajdhani";
+  display: inline-block;
+  margin-left: 24px;
+  padding-left: 34px;
+  max-width: calc(100% - 23px);
+  box-sizing: border-box;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--gunmetal);
+  height: 24px;
+  text-overflow: ellipsis;
+  position: relative;
+  overflow: hidden;
+}
+
+.nw-fm-tree-fileimage::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background-image: url("./images/image-svgrepo-com.svg");
+  background-size: cover;
+  left: 0px;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+}
+
+.nw-fm-tree-filepdf {
+  font-family: "Rajdhani";
+  display: inline-block;
+  margin-left: 24px;
+  padding-left: 34px;
+  max-width: calc(100% - 23px);
+  box-sizing: border-box;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--gunmetal);
+  height: 24px;
+  text-overflow: ellipsis;
+  position: relative;
+  overflow: hidden;
+}
+
+.nw-fm-tree-filepdf::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("./images/file-pdf.svg");
+  background-size: cover;
+  left: 0px;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+}
+
+.nw-fm-tree-file {
+  font-family: "Rajdhani";
+  display: inline-block;
+  margin-left: 24px;
+  padding-left: 34px;
+  max-width: calc(100% - 23px);
+  box-sizing: border-box;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--gunmetal);
+  height: 24px;
+  text-overflow: ellipsis;
+  position: relative;
+  overflow: hidden;
+}
+
+.nw-fm-tree-file::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("./images/fi-ss-file.svg");
+  background-size: cover;
+  left: 0px;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+}
+
+
+.nw-fm-tree-root {
+  font-family: "Rajdhani";
+  display: inline-block;
+  margin-left: 8px;
+  padding-left: 50px;
+  max-width: calc(100% - 23px);
+  box-sizing: border-box;
+  white-space: nowrap;
+  cursor: default;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--gunmetal);
+  height: 24px;
+  text-overflow: ellipsis;
+  position: relative;
+  overflow: hidden;
+}
+
+.nw-fm-tree-root::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("./images/logo_storelife.svg");
+  background-size: cover;
+  left: 0px;
+  top: 0px;
+  width: 42px;
+  height: 24px;
+  background-repeat: no-repeat;
+}
+
+.selected {
+  background-color: rgb(152, 193, 217, 1);
+  /* transition: all 500ms ease-in; */
+  padding: 8px 8px;
+  color: var(--gunmetal);
+}
