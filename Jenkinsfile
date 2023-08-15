@@ -1,19 +1,19 @@
 pipeline {
-  agent {dockerfile true}
+  agent any
   stages {
     stage ("build"){
-      step {
-        sh 'echo "building application" '
+      steps {
+        echo "building application" 
       }
     }
     stage ("test"){
-      step {
-        sh 'echo "testing  application" '
+      steps {
+        echo "testing  application"
       }
     }
     stage ("deploy"){
-      step {
-        sh 'echo "deploying  application" '
+      steps {
+       echo "deploying  application"
       }
     }
   }
